@@ -58,7 +58,7 @@ body{
  }
 
  .nav-bar .logo{
-    color: var(--dark-color);
+    color: var(--white-color);
     font-size: 1.8em;
     font-weight: 600;
     letter-spacing: 2px;
@@ -68,7 +68,7 @@ body{
  }
 
  .navigation .nav-items a{
-    color: var(--dark-color);
+    color: var(--white-color);
     font-size: 1em;
     text-decoration: none;
     text-shadow: var(--text-shadow);
@@ -78,13 +78,16 @@ body{
     display: none;
  }
 
- .navigation .nav-items a:not(:last-child{
+ .navigation .nav-items a:not(:last-child){
     margin-right: 45px;
 }
 
  
 /* Home */
-
+.full-width-image {
+    width: 100vw;
+    filter: brightness(50%);
+}
 /* Background slider */
 
 /* Media icons*/
