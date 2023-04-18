@@ -156,6 +156,30 @@ body{
     box-shadow: var(--box-shadow);
 }
 
+.swiper-slide .text-content .read-btn{
+    border: none;
+    outline: none;
+    background: var(--white-color);
+    color: var(--dark-color);
+    font-size: 1em;
+    font-weight: 500;
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.swiper-slide .text-content .read-btn i{
+    font-size: 1.6em;
+    transition: 0.3s ease;
+}
+
+.swiper-slide .text-content .read-btn:hover i{
+    transform: translateX(5px);
+}
+
 /* Media icons*/
 
 /* About section */
