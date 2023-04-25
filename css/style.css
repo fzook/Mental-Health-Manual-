@@ -6,18 +6,32 @@
     --white-color: #fff;
     --dark-color: #222;
     --body-bg-color: #fff;
-    --section-bg-color: #202834;
+    --section-bg-color: #234658;
     --navigation-item-hover-color: #3b5378;
 
     --text-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     --box-shadow: 0 5px 25px rgba(0 0 0 / 20%);
 
     --scroll-bar-color: #fff;
-    --scroll-thumb-color: #282f4e;
-    --scroll-thumb-hover-color: #454f6b;
+    --scroll-thumb-color: #234658;
+    --scroll-thumb-hover-color: #3A5968;
 }
 
 /* Scroll bar */
+::-webkit-scrollbar{
+    width: 11px;
+    background: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb{
+    width: 100%;
+    background: var(--scroll-thumb-color);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--scroll-thumb-hover-color);
+}
 
 /* Main CSS */
 *{
@@ -31,6 +45,17 @@ body{
     background: var(--body-bg-color);
 }
 
+section{
+    position: relative;
+}
+
+.section{
+    color: var(--white-color);
+    background: var(--section-bg-color);
+    padding: 35px 200px;
+    transition: 0.3s ease;
+}
+
 /* Header */
  header{
     z-index: 999;
@@ -41,6 +66,15 @@ body{
     left: 0;
     display: flex;
     justify-content: center;
+    transition: 0.5s ease;
+    transition-property: height, background;
+ }
+
+ header.sticky{
+    height: calc(2.5rem + 1rem);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
  }
 
  header .nav-bar{
@@ -87,6 +121,18 @@ body{
 .home{
     min-height: 100vh;
 }
+
+.home::before{
+    z-index: 888;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(transparent, var(--section-bg-color));
+}
+
 .image-container{
     width: 100vw;
     height: 100vh;
@@ -242,16 +288,168 @@ body{
 }
 
 /* About section */
+.about h2{
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.about p{
+    margin: 25px 0;
+}
 
 /* Media queries (max-width: 1100px) */
 @media screen and (max-width: 1100px){
-    
+    header .nav-bar{
+    padding: 0 50px;
+ }
+
+ .section{
+    padding: 25px 50px;
+ }
+
+ .media-icons{
+    right: 0;
+    margin-right: 50px;
+ }
+
+ .swiper-slide .text-content{
+    margin: 0 120px 0 50px;
+ }
 }
 
 /* Media queries (max-width: 785px) */
 @media screen and (max-width: 785px){
-    
+header .nav-bar{
+        padding: 25px 20px;
+ }
+
+ .section{
+    padding: 25px 20px;
+ }
+
+ .media-icons{
+    margin-right: 20px;
+ }
+
+ .media-icons a{
+    font-size: 1.5em;
+ }
+
+ .swiper-slide .text-content{
+    margin: 0 70px 0 20px;
+ }
+
+ .swiper-slide .text-content .title{
+    font-size: 3em;
+ } 
+
+ .swiper-slide .text-content .title span{
+    font-size: 0.35em;
+ }
+
+ .swiper-slide .text-content p{
+    font-size: 0.9em;
+ }
+
+ /* Navigation menu */
+ .nav-menu-btn{
+    display: block;
+    color: var(--white-color); 
+    font-size: 1.5em;
+    cursor: pointer;
+ }
+
+ .nav-close-btn{
+    display: block;
+    color: var(--dark-color); 
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.3em;
+    margin: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+ }
+
+ .navigation{
+    z-index: 99999;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+ }
+
+ .navigation.active{
+    visibility: visible;
+    opacity: 1;
+ }
+
+ .navigation .nav-items{
+    position: relative;
+    background: var(--white-color);
+    width: 400px;
+    max-width: 400px;
+    display: grid;
+    place-content: center;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    transform: translateY(-200px);
+    transition: 0.3s ease;
+ }
+
+ .navigation.active .nav-items{
+    transform: translateY(0);
+ }
+
+ .navigation .nav-items a{
+    color: var(--dark-color);
+    font-size: 12m;
+    margin: 15p 50px;
+    transition: 0.3s ease;
+ }
+
+ .navigation .nav-items a:hover{
+     color: var(--navigation-item-hover-color);
+ }
+
+ .navigation .nav-items a i{
+    display: inline-block;
+    font-size: 1.3em;
+    margin-right: 5px;
+ }
+
+ .swiper-slide .text-content .read-btn{
+    font-size: 0.9em;
+    padding: 5px 15px;
+ }
+
+ /* About section */
+ .about h2{
+   font-size: 2.5em;
+ }
+
+ .about p{
+    font-size: 0.9em;
+ }
 }
+
+.title-define{
+    font-size: 1.3em;
+    margin-inline-start: 0px;
+    margin-inline-end: 5px;
+    font-weight: bold;
+}
+
 
 
   
