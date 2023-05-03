@@ -270,6 +270,10 @@ section{
     color: var(--white-color);
   }
 
+  a{
+    text-decoration: none;
+  }
+
 /* Media icons*/
 .media-icons{
     z-index: 999;
