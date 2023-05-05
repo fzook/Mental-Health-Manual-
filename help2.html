@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mental Health Manual</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+  </head>
+  <style>
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/pexels-pool.jpg);
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      filter: brightness(50%);
+    }
+    .inner-container {
+      position: relative;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="inner-container">
+        <header>
+          <div class="nav-bar">
+            <a href="" class="logo">Logo</a>
+            <div class="navigation">
+              <div class="nav-items">
+                <i class="uil uil-times nav-close-btn"></i>
+                <a href="index.html"><i class="uil uil-home"></i>Learn</a>
+                <a href="help.html"><i class="uil uil-compass"></i>Find Help</a>
+                <a href="skills.html"
+                  ><i class="uil uil-info-circle"></i>Minfulness Practice</a
+                >
+                <a href="refs.html"
+                  ><i class="uil uil-document-layout-left"></i>References</a
+                >
+              </div>
+            </div>
+          </div>
+          <i class="uil uil-apps nav-menu-btn"></i>
+        </header>
+        <div>
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button class="accordion-button">
+                  The Eating Disorder Foundation
+                </button>
+              </div>
+              <div class="accordion-content">
+                <p>https://eatingdisorderfoundation.org/</p>
+                <p>(303) 322-3373</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button class="accordion-button">
+                  National Eating Disorders Association (NEDA)
+                </button>
+              </div>
+              <div class="accordion-content">
+                <p>www.NationalEatingDisorders.org</p>
+                <p>(212) 572-6200</p>
+                <p>Helpline: (800) 931-2237</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button class="accordion-button">ED Referral</button>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Offers information regarding national eating disorder
+                  resources.
+                </p>
+                <p>https://www.edreferral.com/</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button class="accordion-button">Findedhelp.com</button>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Treatment Center and Practitioner Directory by the National
+                  Alliance for Eating Disorders
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button class="accordion-button">FEDUP</button>
+              </div>
+              <div class="accordion-content">
+                <p>Fighting Eating Disorders in Underrepresented Populations</p>
+                <p>https://fedupcollective.org/</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button class="accordion-button">Queer Asterisk</button>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  Offers thereputic services for those who identify as part of
+                  the LBTQ+ community
+                </p>
+                <p>http://www.queerasterisk.com/</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    var accordionItems = document.querySelectorAll(".accordion-item");
+
+    accordionItems.forEach(function (item) {
+      var button = item.querySelector(".accordion-button");
+      var content = item.querySelector(".accordion-content");
+
+      button.addEventListener("click", function () {
+        console.log("clicked");
+        if (item.classList.contains("active")) {
+          content.style.height = "0";
+          item.classList.remove("active");
+        } else {
+          content.style.height = content.scrollHeight + "px";
+          item.classList.add("active");
+        }
+      });
+    });
+  </script>
+</html>

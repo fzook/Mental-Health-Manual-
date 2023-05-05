@@ -1,7 +1,10 @@
 (function() {
-    document.getElementById('section-1').style.display = "none"
-    document.getElementById('section-2').style.display = "none"
-    document.getElementById('section-3').style.display = "none"
+    let sec1 = document.getElementById('section-1');
+    let sec2 = document.getElementById('section-2');
+    let sec3 = document.getElementById('section-3');
+    if(sec1) { sec1.style.display = "none" }
+    if(sec2) { sec2.style.display = "none" }
+    if(sec3) { sec3.style.display = "none" }
 })();
 // Swiper slider
 
@@ -47,6 +50,7 @@
     const header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0);
   });
+
 
   //Responsive navigation menu toggle
   const menuBtn = document.querySelector(".nav-menu-btn");

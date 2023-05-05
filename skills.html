@@ -11,45 +11,236 @@
       href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
     />
   </head>
+  <style>
+    .container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/pexels-pool.jpg);
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      filter: brightness(50%);
+    }
+    .inner-container {
+      position: relative;
+    }
+  </style>
   <body>
-    <header>
-      <div class="nav-bar">
-        <a href="" class="logo">Logo</a>
-        <div class="navigation">
-          <div class="nav-items">
-            <i class="uil uil-times nav-close-btn"></i>
-            <a href="index.html"><i class="uil uil-home"></i>Learn</a>
-            <a href="help.html"><i class="uil uil-compass"></i>Find Help</a>
-            <a href="skills.html"
-              ><i class="uil uil-info-circle"></i>Minfulness Practice</a
-            >
-            <a href="refs.html"
-              ><i class="uil uil-document-layout-left"></i>References</a
-            >
+    <div class="container">
+      <div class="inner-container">
+        <header>
+          <div class="nav-bar">
+            <a href="" class="logo">Logo</a>
+            <div class="navigation">
+              <div class="nav-items">
+                <i class="uil uil-times nav-close-btn"></i>
+                <a href="index.html"><i class="uil uil-home"></i>Learn</a>
+                <a href="help2.html"
+                  ><i class="uil uil-compass"></i>Find Help</a
+                >
+                <a href="skills.html"
+                  ><i class="uil uil-info-circle"></i>Minfulness Practice</a
+                >
+                <a href="refs.html"
+                  ><i class="uil uil-document-layout-left"></i>References</a
+                >
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
-        <i class="uil uil-apps nav-menu-btn"></i>
-      </div>
-    </header>
-
-    <section class="home">
-      <div class="media-icons">
-        <a href="#"><i class="uil uil-facebook-f"></i></a>
-        <a href="#"><i class="uil uil-instagram"></i></a>
-        <a href="#"><i class="uil uil-twitter"></i></a>
-      </div>
-      <div class="swiper bg-slider">
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="image-container">
-              <img src="images/pexels-pool2.jpeg" alt="Pool" />
+          <i class="uil uil-apps nav-menu-btn"></i>
+        </header>
+        <div>
+          <h2 class="titles">
+            Mindfulness Activities <span>Prevention Can Begin Today</span>
+          </h2>
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button class="accordion-button">
+                  Journal Prompts for Self-Compassion
+                </button>
+              </div>
+              <div class="accordion-content">
+                <h3>Give yourself advice</h3>
+                <p>
+                  Imagine that a loved one is experiencing a difficult time.
+                  Write down the advice that you would prescribe them in this
+                  situation. Once complete, write down how you can give this
+                  advice to yourself in times of struggle. Describe how you will
+                  show yourself the same love and support that you provided for
+                  them.
+                </p>
+                <h3>Show gratitude</h3>
+                <p>
+                  Write down 5 thing you are grateful for in general. This could
+                  be anything from your family, friends, sunny days, or your
+                  favorite tv show. Next write down 5 thing you are grateful for
+                  concerning your body specifically. For instance, how it allows
+                  you to play the sport you love.
+                </p>
+                <h3>Write yourself a letter</h3>
+                <p>
+                  Write yourself a letter of encouragement. Actively try to show
+                  yourself compassion. If you had a difficult day/week,
+                  recognize that you are not alone, and all human beings go
+                  through challenging times. Write about what happened, good or
+                  bad, and the emotions that accompanied.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button class="accordion-button">
+                  FLARE Worksheet for Anxiety & Fear
+                </button>
+              </div>
+              <div class="accordion-content">
+                <p>
+                  <span style="color: #76141a">Feel </span>the physical
+                  sensations of you body (i.e., your breath, temperature, heart
+                  rate, etc.)
+                </p>
+                <p>
+                  What questions and/or doubts arise in your mind? Write them
+                  below.
+                </p>
+                <ol>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ol>
+                <p>
+                  For each list item,
+                  <span style="color: #76141a">Label </span>the sensation (i.e.,
+                  fear, worry, stress)
+                </p>
+                <ol>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ol>
+                <p>
+                  <span style="color: #76141a">Allow </span>these feeling and
+                  sensations judgement free. Realize that it is okay to feel
+                  this way.
+                </p>
+                <p>
+                  <span style="color: #76141a">Respond </span>by refocusing your
+                  thoughts. Bring your awareness to your breathing. Breathe in
+                  slowly on a count of 4 and out on that same count.
+                </p>
+                <p>
+                  <span style="color: #76141a">Expand </span>your awareness to
+                  the space around you. Reflect on your questions and recognize
+                  that they don’t always need answers, bringing acceptance to
+                  uncertainty. Reflect on things you are grateful for or
+                  progress you have made.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button class="accordion-button">Mindfulness Meditation</button>
+              </div>
+              <div class="accordion-content">
+                <h3>Guide your athletes through meditation</h3>
+                <p>
+                  The goal of mindfulness meditation is to focus on the present
+                  moment and acknowledge thoughts and emotions without
+                  judgement. It is easier said than done, so explain to athletes
+                  that meditation is not meant to be perfect, and this will
+                  become easier with practice.
+                </p>
+                <h3>Time & Place</h3>
+                <p>
+                  Frequency and consistency will ultimately deliver the best
+                  result, but some practice is better than none! Aim for
+                  practice daily, perhaps as a start or finisher to training
+                  sessions, in a location that is familiar and comfortable for
+                  athletes.
+                </p>
+                <h3>Set a timer for 8-10 minutes</h3>
+                <p>
+                  Instruct your athletes to find a comfortable posture. Whether
+                  that is sitting on a chair or laying on the floor. Remind them
+                  to keep their chest open and to keep extremities uncrossed.
+                  Their palms may lay down towards the floor for grounding, or
+                  open to the ceiling to receive. They may close their eyes if
+                  they prefer.
+                </p>
+                <p>
+                  Once in a comfortable position. Begin the timer and bring
+                  awareness to their breathing. Breathing in through the nose
+                  and out through the mouth will help relax the body and calm
+                  the mind. Have them notice the rise in their belly and then
+                  chest as their lungs fill with air before expelling it out.
+                </p>
+                <p>
+                  Allow this time for the athletes to become in tune with their
+                  breathing and to clear their minds. Gently remind them that it
+                  is normal for thoughts to wander in. When this happens, allow
+                  them to pass through without judgement before bringing focus
+                  back to the present moment through their breathing.
+                </p>
+                <p>
+                  When the timer is finished, ask the athletes to slowly
+                  reintroduce movement to their body by gently wiggling their
+                  toes and fingers. Perhaps they can engage in some wrist and
+                  ankle rolls. If their eyes are shut, ask them to slowly
+                  flutter their eyes open.
+                </p>
+                <p>Note:</p>
+                <p>
+                  The meditation can continue as is or bring focus to more
+                  specific elements. These may include, but are not limited to:
+                  Gratitude (i.e., thanking their bodies for all they do on a
+                  daily basis, inside and outside of sport) Body scan (i.e.,
+                  paying close attention to the physical sensations throughout
+                  the body) Loving-kindness (i.e., speaking kind words to
+                  yourself or others. “May I be happy, may I be healthy, may I
+                  be safe.”)
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </body>
+  <script>
+    var accordionItems = document.querySelectorAll(".accordion-item");
+
+    accordionItems.forEach(function (item) {
+      var button = item.querySelector(".accordion-button");
+      var content = item.querySelector(".accordion-content");
+
+      button.addEventListener("click", function () {
+        console.log("clicked");
+        if (item.classList.contains("active")) {
+          content.style.height = "0";
+          item.classList.remove("active");
+        } else {
+          content.style.height = content.scrollHeight + "px";
+          item.classList.add("active");
+        }
+      });
+    });
+  </script>
 </html>

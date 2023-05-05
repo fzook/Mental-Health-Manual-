@@ -1,6 +1,15 @@
 /* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+.example-bg {
+    background: url(../images/pexels-pool.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 /* CSS variables */
 :root{
     --white-color: #fff;
@@ -453,6 +462,83 @@ header .nav-bar{
     margin-inline-end: 5px;
     font-weight: bold;
 }
+
+/* Hero Image */
+
+.hero-image{
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    filter: brightness(50%);
+    object-position: top;
+}
+/* Accordion */
+
+.accordion-container {
+    padding: 15px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    color:white !important;
+    transition: 1s ease;
+    transition-delay: 0.3s;
+}
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion-button {
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 18px;
+    width: 500px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .accordion-content {
+    padding: 0 18px;
+    overflow: hidden;
+    height: 0px;
+    transition: all .5s 
+  }
+  .accordion-item.active > .accordion-content {
+    height: auto !important;
+    transition: all .5s;
+  }
+
+  .accordion-container p{
+    padding: 5px;
+  }
+
+  .titles{
+    font-size: 4em;
+    font-weight: 700;
+    text-shadow: var(--text-shadow);
+    margin: 20px;
+    margin-left: 50px;
+    transform: translateY(-50px);
+    opacity: 0;
+    transform: translateY(0);
+    opacity: 1;
+    transition: 1s ease;
+    transition-delay: 0.3s;
+    transition-property: transform, opacity;
+    color: var(--white-color);
+  }
+
+  .titles span{
+    font-size: 0.3em;
+    font-weight: 300;
+    color: var(--white-color);
+  }
+  
+
 
 
 
