@@ -148,13 +148,21 @@
   </body>
   <script>
     var accordionItems = document.querySelectorAll(".accordion-item");
+    function deactivateAll() {
+      accordionItems.forEach(function (item) {
+        if (item.classList.contains("active")) {
+          item.querySelector(".accordion-content").style.height = "0";
+          item.classList.remove("active");
+        }
+      });
+    }
 
     accordionItems.forEach(function (item) {
       var button = item.querySelector(".accordion-button");
       var content = item.querySelector(".accordion-content");
 
       button.addEventListener("click", function () {
-        console.log("clicked");
+        deactivateAll();
         if (item.classList.contains("active")) {
           content.style.height = "0";
           item.classList.remove("active");

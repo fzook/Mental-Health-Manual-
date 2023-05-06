@@ -537,6 +537,14 @@ header .nav-bar{
     font-weight: 300;
     color: var(--white-color);
   }
+
+  .reference ul li{
+    margin-left: 20px;
+    padding: 10px;
+    color: var(--white-color);
+    text-indent: -1em;
+    padding-left: 1em;
+  }
   
 
 

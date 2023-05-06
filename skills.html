@@ -64,7 +64,7 @@
         </header>
         <div>
           <h2 class="titles">
-            Mindfulness Activities <span>Prevention Can Begin Today</span>
+            Mindful Coaching <span>Prevention Can Begin Today</span>
           </h2>
           <div class="accordion-container">
             <div class="accordion-item">
@@ -202,20 +202,7 @@
                 <p>
                   When the timer is finished, ask the athletes to slowly
                   reintroduce movement to their body by gently wiggling their
-                  toes and fingers. Perhaps they can engage in some wrist and
-                  ankle rolls. If their eyes are shut, ask them to slowly
-                  flutter their eyes open.
-                </p>
-                <p>Note:</p>
-                <p>
-                  The meditation can continue as is or bring focus to more
-                  specific elements. These may include, but are not limited to:
-                  Gratitude (i.e., thanking their bodies for all they do on a
-                  daily basis, inside and outside of sport) Body scan (i.e.,
-                  paying close attention to the physical sensations throughout
-                  the body) Loving-kindness (i.e., speaking kind words to
-                  yourself or others. “May I be happy, may I be healthy, may I
-                  be safe.”)
+                  toes and fingers.
                 </p>
               </div>
             </div>
@@ -227,16 +214,25 @@
   <script>
     var accordionItems = document.querySelectorAll(".accordion-item");
 
+    function deactivateAll() {
+      accordionItems.forEach(function (item) {
+        if (item.classList.contains("active")) {
+          item.querySelector(".accordion-content").style.height = "0";
+          item.classList.remove("active");
+        }
+      });
+    }
+
     accordionItems.forEach(function (item) {
       var button = item.querySelector(".accordion-button");
       var content = item.querySelector(".accordion-content");
 
       button.addEventListener("click", function () {
-        console.log("clicked");
         if (item.classList.contains("active")) {
           content.style.height = "0";
           item.classList.remove("active");
         } else {
+          deactivateAll();
           content.style.height = content.scrollHeight + "px";
           item.classList.add("active");
         }
